@@ -36,6 +36,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.tiptime.ui.theme.TipTimeTheme
 import java.text.NumberFormat
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,6 +69,7 @@ fun TipTimeLayout() {
         modifier = Modifier
             .statusBarsPadding()
             .padding(horizontal = 40.dp)
+            .verticalScroll(rememberScrollState())
             .safeDrawingPadding(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
